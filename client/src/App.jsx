@@ -7,6 +7,10 @@ import Login from "./pages/auth/login";
 
 function App() {
 
+  useEffect(() => {
+    document.title = "Goo-Blog";
+  })
+
   return (
     <Router>
       <div>
