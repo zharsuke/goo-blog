@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const routes = require('./routes/IndexRoutes');
+const IndexRoutes = require('./routes/IndexRoutes');
 
 const init = () => {
     const app = express();
@@ -9,7 +9,8 @@ const init = () => {
 
     app.use(express.json());
 
-    app.use(routes.getIndex());
+    const indexRoutes = new IndexRoutes();
+    app.use(indexRoutes.getIndex());
 
     app.listen(8080, () => {
         console.log("Server listening on port 8080");
