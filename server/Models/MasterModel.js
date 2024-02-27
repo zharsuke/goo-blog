@@ -1,5 +1,0 @@
-class MasterModel {
-    async getAllData() {
-        
-    }
-}
